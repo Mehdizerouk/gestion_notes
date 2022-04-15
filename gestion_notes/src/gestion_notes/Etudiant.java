@@ -11,6 +11,10 @@ public class Etudiant {
 		this.note=10;
 		
 	}
+	public String toString()
+	{
+		return this.nom+ " : "+this.note;
+	}
 	
 
 }
