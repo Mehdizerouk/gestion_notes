@@ -1,5 +1,7 @@
 package gestion_notes;
 
+import aiac.gi18.java.complexe.Complexe;
+
 public class Etudiant {
 	private int id;
 	private String nom;
@@ -11,11 +13,23 @@ public class Etudiant {
 		this.note=10;
 		
 	}
+	
 	public String toString()
 	{
 		return this.nom+ " : "+this.note; 
 		
 	}
+	
+	@Override
+	public boolean equals(Object obj) {
+		if (! (obj instanceof Etudiant) ){
+			return false;
+		}
+	return	((Etudiant)obj).id==this.id; 
+	}
+	
+	
+
 	
 
 }
